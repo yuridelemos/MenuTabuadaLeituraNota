@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,13 @@ namespace Diretorio
 {
     internal class Ler
     {
+        private static string caminhoArquivo()
+        {
+            return ConfigurationManager.AppSettings["CaminhoArquivos"];
+        }
         public static void Arquivos(int posicao)
         {
-            string localArquivo = @"C:\arquivos\arq" + posicao + ".txt";
+            string localArquivo = caminhoArquivo() + "arq" + posicao + ".txt";
             Console.WriteLine($"\nLendo arquivo{localArquivo}");
             if (File.Exists(localArquivo))
             {
@@ -24,14 +29,13 @@ namespace Diretorio
                     }
                 }
             }
-            string localArquivo2 = @"C:\arquivos\arq" + (posicao + 1) + ".txt";
+            string localArquivo2 = caminhoArquivo() + "arq" + (posicao + 1) + ".txt";
             if (File.Exists(localArquivo2))
             {
                 Arquivos(posicao + 1);
             }
 
 
-        } // Pesquisar uma maneira de puxar um arquivo do pc
-
+        } 
     }
 }

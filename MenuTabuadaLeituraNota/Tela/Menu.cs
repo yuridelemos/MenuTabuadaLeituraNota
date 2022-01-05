@@ -1,4 +1,5 @@
 ﻿using Calculo;
+using Classes;
 using Diretorio;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace Tela
         public const int LER_ARQUIVOS = 1;
         public const int TABUADA = 2;
         public const int MEDIA_ALUNO = 3;
+        public const int CADASTRAR_CLIENTES = 4;
         public static void Principal()
         {
             while (true)
@@ -23,6 +25,7 @@ namespace Tela
                     "(1) - Leitura de arquivos \n" +
                     "(2) - Tabuada \n" +
                     "(3) - Media de nota \n" +
+                    "(4) - Cadastrar clientes \n" +
                     "(0) - Sair do programa");
                 int escolhaMenu = int.Parse(Console.ReadLine());
 
@@ -40,6 +43,9 @@ namespace Tela
                         break;
                     case MEDIA_ALUNO:
                         Media.Nota();
+                        break;
+                    case CADASTRAR_CLIENTES:
+                        TelaClientes.Chamar();
                         break;
                     case SAIR_PROGRAMA:
                         return;
