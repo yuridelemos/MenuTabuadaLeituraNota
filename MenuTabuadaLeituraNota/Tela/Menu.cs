@@ -17,6 +17,7 @@ namespace Tela
         public const int TABUADA = 2;
         public const int MEDIA_ALUNO = 3;
         public const int CADASTRAR_CLIENTES = 4;
+        public const int CADASTRAR_USUARIOS = 5;
         public static void Principal()
         {
             while (true)
@@ -26,6 +27,7 @@ namespace Tela
                     "(2) - Tabuada \n" +
                     "(3) - Media de nota \n" +
                     "(4) - Cadastrar clientes \n" +
+                    "(5) - Cadastrar usuários \n" +
                     "(0) - Sair do programa");
                 int escolhaMenu = int.Parse(Console.ReadLine());
 
@@ -46,6 +48,9 @@ namespace Tela
                         break;
                     case CADASTRAR_CLIENTES:
                         TelaClientes.Chamar();
+                        break;
+                    case CADASTRAR_USUARIOS:
+                        TelaUsuario.Chamar();
                         break;
                     case SAIR_PROGRAMA:
                         return;

@@ -48,6 +48,7 @@
     <Compile Include="Calculo\Tabuada.cs" />
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Classes\TelaClientes.cs" />
+    <Compile Include="Classes\TelaUsuario.cs" />
     <Compile Include="Classes\Usuario.cs" />
     <Compile Include="Diretorio\Ler.cs" />
     <Compile Include="Program.cs" />

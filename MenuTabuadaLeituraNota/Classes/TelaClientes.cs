@@ -10,7 +10,7 @@ namespace Classes
     {
         public static void Chamar()
         {
-            Console.WriteLine("===============Cadastro de clientes =============");
+            Console.WriteLine("===============Menu de clientes===============");
             while (true)
             {
                 string mensagem = "Digite uma das opções abaixo\n" +
@@ -48,7 +48,7 @@ namespace Classes
                         }
                         break;
                     default:
-                        Console.WriteLine("Opção difigtada é inválida");
+                        Console.WriteLine("Opção digitada é invalida. Tente novamente.");
                         break;
 
                 }
