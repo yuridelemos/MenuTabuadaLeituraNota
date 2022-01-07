@@ -10,8 +10,12 @@ namespace MesaDeTeste
     {
         public static void Main(string[] args)
         {
-            Menu.Principal();
-
+            // Menu.Principal();
+            Usuario u = new Usuario();
+            u.Nome = "Francisco";
+            u.Telefone = "1231231";
+            u.CPF = "1231232";
+            u.Gravar();
         }
     }
 }

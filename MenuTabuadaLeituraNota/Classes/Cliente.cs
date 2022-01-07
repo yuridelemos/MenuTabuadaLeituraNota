@@ -26,13 +26,13 @@ namespace Classes
             this.CPF = cpf;
         }
         public Cliente() { }
-        public void Gravar()
+        public virtual void Gravar()
         {
             var clientes = Cliente.LerClientes();
             clientes.Add(this);
-            if (File.Exists(caminhoBaseClientes()))
+            if (File.Exists(caminhoBase()))
             {
-                StreamWriter sw = new StreamWriter(caminhoBaseClientes());
+                StreamWriter sw = new StreamWriter(caminhoBase());
                 sw.WriteLine("nome;telefone;cpf");
                 foreach (Cliente c in clientes)
                 {
@@ -42,7 +42,7 @@ namespace Classes
                 sw.Close();
             }
         }
-        private static string caminhoBaseClientes()
+        private static string caminhoBase()
         {
             return ConfigurationManager.AppSettings["BaseDeClientes"];
         }
@@ -50,9 +50,9 @@ namespace Classes
         public static List<Cliente> LerClientes()
         {
             var clientes = new List<Cliente>();
-            if (File.Exists(caminhoBaseClientes()))
+            if (File.Exists(caminhoBase()))
             {
-                using (StreamReader arquivo = File.OpenText(caminhoBaseClientes()))
+                using (StreamReader arquivo = File.OpenText(caminhoBase()))
                 {
                     string linha;
                     int i = 0;
