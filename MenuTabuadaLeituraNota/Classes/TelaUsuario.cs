@@ -39,7 +39,7 @@ namespace Classes
                         break;
 
                     case 2:
-                        var usuarios = Usuario.LerUsuarios();
+                        var usuarios = new Usuario().Ler();
                         foreach(var u in usuarios)
                         {
                             Console.WriteLine(u.Nome);

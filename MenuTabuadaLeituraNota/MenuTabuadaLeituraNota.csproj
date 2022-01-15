@@ -46,7 +46,9 @@
   <ItemGroup>
     <Compile Include="Calculo\Media.cs" />
     <Compile Include="Calculo\Tabuada.cs" />
+    <Compile Include="Classes\Base.cs" />
     <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\IPessoa.cs" />
     <Compile Include="Classes\TelaClientes.cs" />
     <Compile Include="Classes\TelaUsuario.cs" />
     <Compile Include="Classes\Usuario.cs" />

@@ -26,7 +26,7 @@ namespace Classes
                         return;
                     case 1:
                         var cliente = new Cliente();
-
+                         
                         Console.WriteLine("Digite o nome do cliente: ");
                         cliente.Nome = Console.ReadLine();
 
@@ -38,7 +38,7 @@ namespace Classes
                         cliente.Gravar();
                         break;
                     case 2:
-                        var clientes = Cliente.LerClientes();
+                        var clientes = new Cliente().Ler();
                         foreach(Cliente c in clientes)
                         {
                             Console.WriteLine(c.Nome);
