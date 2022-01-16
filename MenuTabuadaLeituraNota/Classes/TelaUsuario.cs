@@ -16,7 +16,7 @@ namespace Classes
                 string mensagem = "Digite uma das opções abaixo\n" +
                     "(1) - Cadastrar Usuários\n" +
                     "(2) - Listar Usuários\n" +
-                    "(0) - Sair de Cadastro";
+                    "(0) - Sair de Cadastro\n";
                 Console.WriteLine(mensagem);
 
                 int opcao = int.Parse(Console.ReadLine());
@@ -25,7 +25,7 @@ namespace Classes
                     case 0:
                         return;
                     case 1:
-                        Usuario usuario = new Usuario();
+                        var usuario = new Usuario();
 
                         Console.WriteLine("Digite o nome do usuário: ");
                         usuario.Nome = Console.ReadLine();
@@ -40,7 +40,7 @@ namespace Classes
 
                     case 2:
                         var usuarios = new Usuario().Ler();
-                        foreach(var u in usuarios)
+                        foreach(Usuario u in usuarios)
                         {
                             Console.WriteLine(u.Nome);
                             Console.WriteLine(u.Telefone);
